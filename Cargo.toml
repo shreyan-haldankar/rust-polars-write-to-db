@@ -1,0 +1,22 @@
+[package]
+name = "rust-polars-write-to-db"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance ingestion of Polars DataFrames into PostgreSQL using COPY CSV protocol"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+polars = { version = "0.46", features = ["lazy", "dtype-full", "csv"] }
+tokio = { version = "1", features = ["full"] }
+tokio-postgres = "0.7"
+bytes = "1"
+dotenv = "0.15"
+sysinfo = "0.33"
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter"] }
+clap = { version = "4", features = ["derive"] }
+chrono = "0.4"
+rand = "0.8"
+futures-util = "0.3"
